@@ -1,0 +1,54 @@
+
+$sm: 425px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$title: SourceSansPro-Light;
+$text: OpenSans-Regular;
+$logo: BigJohn;
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.title-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    &__title {
+        font-family: $title;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+        color: #555;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        & span {
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #555;;
+            margin-top: 30px;
+        }
+    }
+    &__subtitle {
+        font-family: $text;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        color: #555;
+    }
+}
+
+@import "null";
+@import "fonts";
+@import "_header";
+@import "_footer";
+@import "_main";

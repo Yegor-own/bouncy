@@ -83,6 +83,19 @@
     flex: 1 1 540px;
 }
 .header__link {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &.active {
+        outline: 2px solid #fff;
+    }
+    &:hover {
+        outline: 2px solid #fff;
+    }
 }
 
 .header__link a {
@@ -97,10 +110,6 @@
     text-align: left;
     border: none;
     transition: 0.2s;
-    &:hover {
-        border-bottom: 1px solid #fff;
-        transition: 0.2s;
-    }
 }
 
 .header__burger {

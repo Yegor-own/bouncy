@@ -13,25 +13,31 @@ $(document).ready(function() {
 		}
 	});
 
-	let windowInnerWidth = window.innerWidth;
-	let slides = 4;
-	if (windowInnerWidth <= 1024) {
-		slides = 3;
-		if (windowInnerWidth <= 768) {
-			slides = 2;
-			if (windowInnerWidth <= 647) {
-				slides = 1;
-			}
-		}
-	}
-	$('.about-us__slider').slick({
-		slidesToShow: slides,
-		infinite: false,
-	});
-	$('.blog-slider__body').slick({
-		arrows: false,
-		dots: true,
-		slidesToShow: 1,
-		infinite: true,
-	});
+	$('div.about__text').not(':first').hide()
+	$(".about__button").click(function() {
+		$('div.about__text').not(':first').toggle(200)
+	})
+
+
+	// let windowInnerWidth = window.innerWidth;
+	// let slides = 4;
+	// if (windowInnerWidth <= 1024) {
+	// 	slides = 3;
+	// 	if (windowInnerWidth <= 768) {
+	// 		slides = 2;
+	// 		if (windowInnerWidth <= 647) {
+	// 			slides = 1;
+	// 		}
+	// 	}
+	// }
+	// $('.about-us__slider').slick({
+	// 	slidesToShow: slides,
+	// 	infinite: false,
+	// });
+	// $('.blog-slider__body').slick({
+	// 	arrows: false,
+	// 	dots: true,
+	// 	slidesToShow: 1,
+	// 	infinite: true,
+	// });
 });

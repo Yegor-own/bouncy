@@ -30,6 +30,7 @@
         text-align: left;
         color: #81868e;
         margin-bottom: 40px;
+        display: block;
     }
     &__button {
         font-family: $text;
@@ -42,6 +43,7 @@
         padding: 5px 20px;
         border: 2px solid #000;
         transition: 0.3s;
+        background: none;
         &:hover {
             background: #000;
             color: #fff;
@@ -68,6 +70,86 @@
             max-width: 470px;
             margin-right: 0px;
             margin-bottom: 50px;
+        }
+    }
+}
+
+
+.details-about {
+    background: rgba(243,243,243, 1);
+    &__body {
+        padding: 80px 20px 100px 20px;
+    }
+    &__head {
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background-color: #81868e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        margin-bottom: 60px;
+        &:hover {
+            opacity: 0.9;
+        }
+        &:first-child {
+            background-color: #19bd9a;
+        }
+        & img {
+            transform: scale(50%);
+        }
+    }
+    &__title {
+        font-family: $text;
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        text-align: left;
+        color: #464646;
+        margin-bottom: 40px;
+        @media (max-width: $lg) {
+            text-align: center;
+        }
+    }
+    &__text {
+        display: flex;
+        font-family: $text;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: 0.8px;
+        text-align: left;
+        color: #81868e;
+        flex-wrap: wrap;
+        & p {
+            width: 48%;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        & p:first-child {
+            padding-right: 110px;
+        }
+        @media (max-width: $lg) {
+            align-items: center;
+            justify-content: center;
+            & p:first-child {
+                padding-right: 0px;
+            }
+        }
+        @media (max-width: $sm) {
+            & p {
+                width: 100%;
+            }
         }
     }
 }

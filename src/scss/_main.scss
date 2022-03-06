@@ -153,3 +153,127 @@
         }
     }
 }
+
+.projects {
+    &__body {
+        margin-top: 80px;
+    }
+    &__head {
+    }
+    &__content {
+        display: flex;
+        @media (max-width: $md) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__image {
+        position: relative;
+        z-index: 2;
+        & span {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $title;
+            font-size: 20px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.6;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            background: none;
+            transition: 0.3s;
+        }
+        &:not(:first-child) {
+            @media (max-width: $md) {
+                margin-top: 2px;
+                width: 50%;
+                height: auto;
+            }
+            & span {
+                background: rgba(56,56,58, 0.85);
+                &:hover {
+                    background: rgba(56,56,58, 0.2);
+                    font-size: 0;
+                }
+            }
+        }
+        & img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__footer {
+        height: 110px;
+        background: url('../img/projects/bg.webp') 50% 0/cover no-repeat;
+        @media (max-width: $md) {
+            height: auto;
+        }
+        & div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            @media (max-width: $md) {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+        }
+        & p {
+            font-family: $text;
+            font-size: 20px;
+            line-height: normal;
+            letter-spacing: 0.8px;
+            text-align: left;
+            color: #fff;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            @media (max-width: $md) {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__button {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $text;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.75;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        background: none;
+        width: 140px;
+        height: 40px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        transition: 0.3s;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+}
